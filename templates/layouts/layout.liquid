@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>My Awesome Site: {% block pagetitle %}Title{% endblock %}</title>
+        <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+        {{ "normalize.css" | asset_url | stylesheet_tag }}
+        {{ "styles.css" | asset_url | stylesheet_tag }}
+        <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    </head>
+    <body>
+        {% include "header" %}
+        
+        {% block content %}{% endblock %}
+        
+        {% include "footer" %}
+        
+        {% block scripts %}{% endblock %}
+        {{ "app.js" | asset_url | script_tag }}
+    </body>
+</html>
