@@ -9,13 +9,15 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
     </head>
     <body>
-        {% include "header" %}
-        
-        {% block content %}{% endblock %}
-        
-        {% include "footer" %}
-        
-        {% block scripts %}{% endblock %}
-        {{ "app.js" | asset_url | script_tag }}
+        <div class="wrapper">
+            {% include "header" %}
+            
+            {% block content %}{% endblock %}
+            
+            {% include "footer" %}
+            
+            {% block scripts %}{% endblock %}
+            {{ "app.js" | asset_url | script_tag }}
+        </div>
     </body>
 </html>

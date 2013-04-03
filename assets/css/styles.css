@@ -4,5 +4,9 @@ body {
   color: #444;
   padding: 2em; }
 
-h1, h2 {
+h1, h2, h3, h4, h5 {
   font-weight: 100; }
+
+.wrapper {
+  width: 1180px;
+  margin: 0 auto; }
